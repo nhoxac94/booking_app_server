@@ -12,22 +12,14 @@ dotenv.config();
 
 const PORT = process.env.PORT || 8800;
 
-// const connect = async () => {
-//   try {
-//     await mongoose.connect(process.env.MONGO);
-//     console.log("Connected to MongoDB");
-//   } catch (err) {
-//     throw err;
-//   }
-// };
-
-// mongoose.connection.on("connected", () => {
-//   console.log("MongoDB connected");
-// });
-
-// mongoose.connection.on("disconnect", () => {
-//   console.log("MongoDB disconnect");
-// });
+const connect = async () => {
+  try {
+    await mongoose.connect(process.env.MONGO);
+    console.log("Connected to MongoDB");
+  } catch (err) {
+    throw err;
+  }
+};
 
 const app = express();
 
@@ -53,6 +45,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  // connect();
+  connect();
   console.log(`Server is connecting on port ${PORT}`);
 });
