@@ -14,17 +14,12 @@ const PORT = process.env.PORT || 8800;
 
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO, {
-      useNewUrlParser: "true",
-      useUnifiedTopology: "true",
-    });
+    await mongoose.connect(process.env.MONGO);
     console.log("Connected to MongoDB");
   } catch (err) {
     throw err;
   }
 };
-
-console.log(process.env.MONGO);
 
 const app = express();
 
