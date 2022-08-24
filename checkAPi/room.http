@@ -1,0 +1,47 @@
+POST http://localhost:8800/api/rooms/6303481fef97ee18b2bb9ac8
+Content-type: application/json
+
+{
+ "title" : "Another Room",
+ "desc" : "King size bed, 1 badroom, balcony",
+ "price" : 100,
+ "maxPeople" : 2,
+ "roomNumbers" : [{"number" : 301}, {"number" : 302}]
+}
+
+###
+
+
+PUT  http://localhost:8800/api/hotels/6302eab83a28fbef0c1268d0
+Content-type: application/json
+
+{
+  "name": "Hotel Califonia oh yeh"
+}
+
+###
+
+GET   http://localhost:8800/api/hotels/6303481fef97ee18b2bb9ac8
+Content-type: application/json
+
+
+###
+
+GET  http://localhost:8800/api/hotels
+Content-type: application/json
+
+
+###
+
+DELETE  http://localhost:8800/api/rooms/6303419e9d137ab907e095d9/6302f5cd01ce654a1cb0bcb0
+Content-type: application/json
+
+###
+# ADD DATE
+
+PUT  http://localhost:8800/api/rooms/availability/6304692c39a24986ccec9c95
+Content-type: application/json
+
+{
+  "dates" : ["2022-08-22T05:38:11.943Z", "2022-08-23T06:38:11.943Z"]
+}

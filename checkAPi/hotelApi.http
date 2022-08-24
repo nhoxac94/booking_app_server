@@ -1,0 +1,58 @@
+POST http://localhost:8800/api/hotels
+Content-type: application/json
+
+{
+  "name": "Hotel London 2",
+  "type": "hotel" ,
+  "city": "london",
+  "address": "someWhere",
+  "distance": "500",
+  "title" : "Best Hotel in the City",
+  "desc": "hotel description",  
+  "cheapestPrice": 100 
+}
+
+###
+
+
+PUT  http://localhost:8800/api/hotels/6302eab83a28fbef0c1268d0
+Content-type: application/json
+
+{
+  "name": "Hotel Califonia oh yeh"
+}
+
+###
+
+GET   http://localhost:8800/api/hotels/6302eab83a28fbef0c1268d0
+Content-type: application/json
+
+
+###
+# GET ALL HOTEL
+GET  http://localhost:8800/api/hotels?featured=true&limit=2&min=2&max=80
+Content-type: application/json
+
+
+###
+
+DELETE  http://localhost:8800/api/hotels/6302eab83a28fbef0c1268d0
+Content-type: application/json
+
+###
+# Get hotel count
+
+GET  http://localhost:8800/api/hotels/countByCity?cities=berlin,marid,london
+Content-type: application/json
+
+###
+# Get hotel count by type
+
+GET  http://localhost:8800/api/hotels/countByType
+Content-type: application/json
+
+###
+# Get hotel room
+
+GET  http://localhost:8800/api/hotels/room/6303481fef97ee18b2bb9ac8
+Content-type: application/json

@@ -1,0 +1,53 @@
+POST http://localhost:8800/api/auth/register
+Content-type: application/json
+
+{
+ "username" : "dragonFly7",
+ "email" : "dragonfly7n@gamail.com",
+ "password" : "12345",
+ "country" : "VN",
+ "city" : "HCM",
+ "phone" : 123456789,
+ "image" : "https://cdn.cnn.com/cnnnext/dam/assets/220818142713-dogs-tears-emotions-wellness-stock-exlarge-169.jpg"
+ 
+}
+
+###
+
+
+POST  http://localhost:8800/api/auth/login
+Content-type: application/json
+
+{
+ "username" : "dragonFlyAdmin",
+ "password" : "12345"
+}
+
+###
+
+PUT  http://localhost:8800/api/users/6302f9bf316915542bc52b40
+Content-type: application/json
+
+{
+ "username" : "dragonFlyUpdate"
+}
+
+
+###
+
+GET  http://localhost:8800/api/users/checkAuthentication
+Content-type: application/json
+access_token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDJmOWJmMzE2OTE1NTQyYmM1MmI0MCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NjExNDY0MDV9.XGWmH7uO1iMcYeRFSr6f11RhmCoyyFrGTazKpAiE3VU
+
+###
+
+GET  http://localhost:8800/api/users/checkuser/6302f9bf316915542bc52b40
+Content-type: application/json
+access_token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDJmOWJmMzE2OTE1NTQyYmM1MmI0MCIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NjExNDY0MDV9.XGWmH7uO1iMcYeRFSr6f11RhmCoyyFrGTazKpAiE3VU
+
+
+###
+
+GET  http://localhost:8800/api/users/checkAdmin/6303164358f04e365359365b
+Content-type: application/json
+access_token : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMDMxNjQzNThmMDRlMzY1MzU5MzY1YiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY2MTE0NjgxN30.Xi5fhKzE_vk00tUpEP9Hl7-E6IoNCNrbZqqMUYKIdRE
