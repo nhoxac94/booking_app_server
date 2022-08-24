@@ -21,6 +21,8 @@ const connect = async () => {
   }
 };
 
+console.log(process.env.MONGO);
+
 const app = express();
 
 // Middleware

@@ -30,7 +30,7 @@ Content-type: application/json
 
 ###
 # GET ALL HOTEL
-GET  http://localhost:8800/api/hotels?featured=true&limit=2&min=2&max=80
+GET  http://localhost:8800/api/hotels?featured=true&limit=2&min=2&max=200
 Content-type: application/json
 
 
